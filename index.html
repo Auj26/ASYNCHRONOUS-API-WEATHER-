@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pricing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>Pricing Calculator</h2>
+
+        <!-- Input 1: Quantity / Users -->
+        <div class="input-group">
+            <label for="usersRange">Number of Users: <span id="usersValue">5</span></label>
+            <input type="range" id="usersRange" min="1" max="100" value="5">
+        </div>
+
+        <!-- Input 2: Plan Selection -->
+        <div class="input-group">
+            <label>Select Plan:</label>
+            <select id="planSelect">
+                <option value="10">Basic ($10/user)</option>
+                <option value="20" selected>Pro ($20/user)</option>
+                <option value="30">Enterprise ($30/user)</option>
+            </select>
+        </div>
+
+        <!-- Input 3: Add-ons (Checkboxes) -->
+        <div class="input-group checkbox-group">
+            <label><input type="checkbox" id="addonSupport" value="15"> Priority Support (+$15)</label>
+            <label><input type="checkbox" id="addonStorage" value="25"> Extra Cloud Storage (+$25)</label>
+        </div>
+
+        <!-- Output Display -->
+        <div class="result-box">
+            <h3>Total Estimated Cost:</h3>
+            <p id="totalPrice">$0.00</p>
+            <p id="discountText" class="discount-badge"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
